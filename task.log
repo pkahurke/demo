@@ -1,0 +1,136 @@
+==========================================================
+EC2 PRACTICAL TASK 1
+WEB SERVER DEPLOYMENT
+==========================================================
+
+Objective
+
+Launch an EC2 instance and host a simple website.
+
+Requirements
+
+✓ Launch an Amazon Linux 2023 EC2 instance
+✓ Create a Security Group allowing SSH and HTTP
+✓ Connect using SSH
+✓ Install Apache Web Server
+✓ Create a custom index.html page
+✓ Verify the website in a browser
+
+Expected Output
+
+• Apache is running
+• Website is accessible using the EC2 Public IP
+
+==========================================================
+EC2 PRACTICAL TASK 2
+EBS VOLUME MANAGEMENT
+==========================================================
+
+Objective
+
+Attach an additional EBS volume to an EC2 instance.
+
+Requirements
+
+✓ Launch an EC2 instance
+✓ Create a 5 GB EBS Volume
+✓ Attach the volume to the instance
+✓ Format the volume
+✓ Mount it permanently using /etc/fstab
+✓ Create a file inside the mounted directory
+
+Expected Output
+
+• Volume is mounted after reboot
+• File remains available after restart
+
+==========================================================
+EC2 PRACTICAL TASK 3
+AMI AND INSTANCE RECOVERY
+==========================================================
+
+Objective
+
+Create an AMI and recover the server using it.
+
+Requirements
+
+✓ Launch an EC2 instance
+✓ Install Apache
+✓ Create a sample webpage
+✓ Create an AMI
+✓ Terminate the original instance
+✓ Launch a new instance from the AMI
+
+Expected Output
+
+• New instance contains the same website
+• Website opens without reconfiguration
+
+==========================================================
+EC2 PRACTICAL TASK 4
+ELASTIC IP
+==========================================================
+
+Objective
+
+Assign a static public IP to an EC2 instance.
+
+Requirements
+
+✓ Launch an EC2 instance
+✓ Allocate an Elastic IP
+✓ Associate it with the instance
+✓ Verify the public IP changes to the Elastic IP
+✓ Stop and Start the instance
+✓ Verify the Elastic IP remains the same
+
+Expected Output
+
+• Instance is always accessible using the same public IP
+
+==========================================================
+EC2 PRACTICAL TASK 5
+AUTO RECOVERY USING AUTO SCALING
+==========================================================
+
+Objective
+
+Automatically replace a failed EC2 instance.
+
+Requirements
+
+✓ Create a Launch Template
+✓ Create an Auto Scaling Group
+✓ Desired Capacity = 1
+✓ Minimum = 1
+✓ Maximum = 2
+✓ Attach the Auto Scaling Group to a Target Group
+✓ Manually terminate the running EC2 instance
+
+Expected Output
+
+• Auto Scaling automatically launches a replacement instance
+• The new instance becomes healthy in the Target Group
+• Application remains available
+
+==========================================================
+BONUS CHALLENGE
+==========================================================
+
+Deploy a highly available web application using:
+
+✓ 2 Public Subnets
+✓ Application Load Balancer
+✓ Launch Template
+✓ Auto Scaling Group
+✓ Desired Capacity = 2
+✓ CPU-based Auto Scaling
+✓ Health Checks
+
+Verify:
+
+• Load balancer distributes traffic
+• Unhealthy instances are replaced automatically
+• Scale out occurs when CPU > 50%
+• Scale in occurs when CPU < 30%
